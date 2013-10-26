@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Bootstrap core CSS -->
+        <link href="dist/css/bootstrap.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="dist/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="dist/css/signin.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="dist/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="dist/css/starter-template.css" rel="stylesheet">
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="easyrtc/easyrtc.js"></script>
+        <script type="text/javascript" src="js/chat.js"></script>
+        <style type="text/css">
+            #stuffToSend {width:300px;}
+            #sendMessageArea{
+                float:left;
+                width:400px;
+                padding-right:20px;
+            }
+            #sendMessageText{
+                width:100%;
+            }
+            #conversation {
+                height:300px;
+                border:solid 1px gray;
+                overflow-y:scroll;
+            }
+        </style>
+    </head>
+    <body onload="connect()">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Right Way</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li class="active"><a href="chat_board.html">Chat Board</a></li>
+                        <li><a href="audiovideo_chat.html">Audio Video</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Chat Board: Received Messages</h3>
+            </div>
+            <div id="receiveMessageArea">
+                
+            <div id="conversation" class="panel-body" style="height: 350px">
+                ...
+            </div>
+            </div>
+        </div>
+        <br>
+        <div id="sendMessageArea">
+        <div id="iam">Obtaining ID...</div>
+        <input id="sendMessageText" type="text" class="form-control" placeholder="type here" style="height: 72px;" autofocus>
+        <div id="otherClients"></div>
+        </div> 
+        <br>
+    </body>
+</html>
